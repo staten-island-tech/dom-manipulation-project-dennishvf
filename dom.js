@@ -5,3 +5,6 @@ const DOMselectors= {
 };
 console.log(DOMselectors.Animalname)
 function()
+const domselectors = {
+    
+}
