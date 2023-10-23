@@ -1,9 +1,10 @@
 const DOMselectors= {
-    form: document.querySelector("form"),
-    namesubmit: document.querySelector(".animal-name"),
-    h2: document.querySelector("h2"),
+    form: document.getElementById("form"),
+    namesubmit: document.getElementById("animal-name"),
+    h2s: document.getElementById("headin"),
 };
-console.log(DOMselectors.h2s)
+console.log(DOMselectors.h2s);
+
 DOMselectors.form.addEventListener("submit", function (event) {
     event.preventDefault();
     console.log(DOMselectors.namesubmit.value);
