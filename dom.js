@@ -2,6 +2,7 @@ const DOMselectors= {
     form: document.getElementById("form"),
     namesubmit: document.getElementById("animal-name"),
     h2s: document.querySelectorAll(".card-title"),
+    button: document.getElementById("btn"),
 };
 console.log(DOMselectors.h2s);
 
