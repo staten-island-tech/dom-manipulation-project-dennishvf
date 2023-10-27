@@ -25,6 +25,14 @@ DOMselectors.form.addEventListener("submit",(event3) => {
     console.log(DOMselectors.Anidescform.value);
     DOMselectors.desc.forEach((des) => (des.textContent = DOMselectors.Anidescform.value));
 });
+function getridofcard () {
+    const remove = document.querySelectorAll(".btn2");
+    remove.forEach((erase) => {
+        erase.addEventListener("press", (eventf) => {
+            eventf.target.parentElement.remove();
+        })
+    })
+}
 
 function makecard() {
 
