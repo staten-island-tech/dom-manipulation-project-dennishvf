@@ -1,8 +1,8 @@
 const DOMselectors= {
     form: document.getElementById("form"),
-    Aninameform: document.getElementById("animal-name"),
-    Aniimgform: document.getElementById("image"),
-    Anidescform: document.getElementById("Type-of-diet"),
+    AniNameform: document.getElementById("animal-name"),
+    AniImgform: document.getElementById("image"),
+    AniDescform: document.getElementById("Type-of-diet"),
     title: document.querySelectorAll(".card-title"),
     image: document.querySelectorAll(".pic"),
     desc: document.querySelectorAll(".animal-desc"),
@@ -12,19 +12,14 @@ console.log(DOMselectors.title);
 console.log(DOMselectors.image);
 console.log(DOMselectors.desc);
 
-DOMselectors.form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    console.log(DOMselectors.Aninameform.value);
-    DOMselectors.title.forEach((hed) => (hed.textContent = DOMselectors.Aninameform.value));
-});
-DOMselectors.form.addEventListener("submit", (event2) => {
-    console.log(DOMselectors.Aniimgform.value);
-    DOMselectors.image.forEach((pict) => (pict.textContent = DOMselectors.Aniimgform.value));
-});
-DOMselectors.form.addEventListener("submit",(event3) => {
-    console.log(DOMselectors.Anidescform.value);
-    DOMselectors.desc.forEach((des) => (des.textContent = DOMselectors.Anidescform.value));
-});
+function makeAnimal() {
+const make= {name:DOMselectors.AniNameform, desc:DOMselectors.AniDescform, img:DOMselectors.AniImgform};
+return make;
+}
+function addcard(anicard){
+
+}
+const anicard= makecard
 function getridofcard () {
     const remove = document.querySelectorAll(".btn2");
     remove.forEach((erase) => {
@@ -33,11 +28,8 @@ function getridofcard () {
         })
     })
 }
-
-function makecard() {
-
-}
-function addcard(anicard){
-
-}
-const anicard= makecard
+DOMselectors.form.addEventListener("submit", (event) => {
+    event.preventDefault();
+   //
+    DOMselectors.title.forEach((hed) => (hed.textContent = DOMselectors.Aninameform.value));
+});
