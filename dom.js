@@ -13,7 +13,7 @@ console.log(DOMselectors.image);
 console.log(DOMselectors.desc);
 
 function makeAnimal() {
-const make= {name:DOMselectors.AniNameform, desc:DOMselectors.AniDescform, img:DOMselectors.AniImgform};
+const make= {name:DOMselectors.AniNameform, img:DOMselectors.AniImgform,desc:DOMselectors.AniDescform,};
 return make;
 }
 
