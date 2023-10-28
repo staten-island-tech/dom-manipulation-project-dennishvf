@@ -16,9 +16,13 @@ function makeAnimal() {
 const make= {name:DOMselectors.AniNameform, desc:DOMselectors.AniDescform, img:DOMselectors.AniImgform};
 return make;
 }
-function addcard(anicard){
 
+function addcard(anicard){
+document
+.querySelector(".flex-container")
+.insertAdjacentHTML("afterbegin", `div class="card"><div class="card-title">${Animal.title}<div></div>`);
 }
+
 const anicard= makecard
 function getridofcard () {
     const remove = document.querySelectorAll(".btn2");
@@ -28,6 +32,7 @@ function getridofcard () {
         })
     })
 }
+
 DOMselectors.form.addEventListener("submit", (event) => {
     event.preventDefault();
    //
