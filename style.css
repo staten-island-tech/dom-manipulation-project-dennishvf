@@ -15,5 +15,22 @@ padding: 0%;
     margin: 12px 12px 12px;
     border-radius: 15px;
     box-shadow: 7px 7px 7px 7px;
+}
 
+.pic {
+    width: 80%;
+    height: 80%;
+    width: 20vw;
+    height: 280px;
+    object-fit: cover;
+  }
+
+  .card-title {
+    font-family: 'Croissant One', cursive;
+    font-size: large;
+}
+
+.animal-desc {
+    text-align: center;
+    font-size: x-large;
 }

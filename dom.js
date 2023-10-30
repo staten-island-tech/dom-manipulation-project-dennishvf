@@ -17,13 +17,10 @@ const make= {name:DOMselectors.AniNameform, img:DOMselectors.AniImgform,desc:DOM
 return make;
 }
 
-function addcard(anicard){
-document
-.querySelector(".flex-container")
-.insertAdjacentHTML("afterbegin", `div class="card"><div class="card-title">${Animal.title}<div></div>`);
+function addcard(){
+document.querySelector(".flex-container").insertAdjacentHTML("afterbegin", `div class="card"><div class="card-title">${Animal.title}<div></div>`);
 }
 
-const anicard= makecard
 function getridofcard () {
     const remove = document.querySelectorAll(".btn2");
     remove.forEach((erase) => {
@@ -35,6 +32,8 @@ function getridofcard () {
 
 DOMselectors.form.addEventListener("submit", (event) => {
     event.preventDefault();
-   //
-    DOMselectors.title.forEach((hed) => (hed.textContent = DOMselectors.Aninameform.value));
+    DOMselectors.title.forEach((hed) => (hed.textContent = DOMselectors.AniNameform.value));
+});
+DOMselectors.form.addEventListener("submit", (event2) => {
+    DOMselectors.desc.forEach((des) => (des.textContent = DOMselectors.AniDescform.value));
 });
