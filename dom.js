@@ -31,10 +31,10 @@ DOMselectors.form.addEventListener("submit", (event2) => {
 });
 
 function getridofcard () {
-    const remove = document.querySelectorAll(".btn2");
+    const remove = document.querySelector(".btn2");
     remove.forEach((erase) => {
         erase.addEventListener("press", (eventf) => {
             eventf.target.parentElement.remove();
-        })
-    })
+        });
+    });
 }
