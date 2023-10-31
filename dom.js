@@ -21,6 +21,15 @@ function addcard(){
 document.querySelector(".flex-container").insertAdjacentHTML("afterbegin", `div class="card"><div class="card-title">${Animal.title}<div></div>`);
 }
 
+DOMselectors.form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    DOMselectors.title.forEach((hed) => (hed.textContent = DOMselectors.AniNameform.value));
+});
+
+DOMselectors.form.addEventListener("submit", (event2) => {
+    DOMselectors.desc.forEach((des) => (des.textContent = DOMselectors.AniDescform.value));
+});
+
 function getridofcard () {
     const remove = document.querySelectorAll(".btn2");
     remove.forEach((erase) => {
@@ -29,11 +38,3 @@ function getridofcard () {
         })
     })
 }
-
-DOMselectors.form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    DOMselectors.title.forEach((hed) => (hed.textContent = DOMselectors.AniNameform.value));
-});
-DOMselectors.form.addEventListener("submit", (event2) => {
-    DOMselectors.desc.forEach((des) => (des.textContent = DOMselectors.AniDescform.value));
-});
