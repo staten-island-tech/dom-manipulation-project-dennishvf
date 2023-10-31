@@ -8,27 +8,22 @@ const DOMselectors= {
     desc: document.querySelectorAll(".animal-desc"),
     button: document.getElementById("btn"),
 };
-console.log(DOMselectors.title);
-console.log(DOMselectors.image);
-console.log(DOMselectors.desc);
 
 function makeAnimal() {
-const make= {name:DOMselectors.AniNameform, img:DOMselectors.AniImgform,desc:DOMselectors.AniDescform,};
+const make= {name:DOMselectors.AniNameform.value, img:DOMselectors.AniImgform.value,desc:DOMselectors.AniDescform.value,};
 return make;
 }
 
-function addcard(){
-document.querySelector(".flex-container").insertAdjacentHTML("afterbegin", `div class="card"><div class="card-title">${Animal.title}<div></div>`);
+function addcard(Animal){
+document.querySelector(".flex-container").insertAdjacentHTML("afterbegin", `div class="card"><div class="card-title">${Animal.name}<div></div>`);
 }
 
 DOMselectors.form.addEventListener("submit", (event) => {
     event.preventDefault();
-    DOMselectors.title.forEach((hed) => (hed.textContent = DOMselectors.AniNameform.value));
+    const monkey = makeAnimal();
+    addcard(monkey)
 });
 
-DOMselectors.form.addEventListener("submit", (event2) => {
-    DOMselectors.desc.forEach((des) => (des.textContent = DOMselectors.AniDescform.value));
-});
 
 function getridofcard () {
     const remove = document.querySelector(".btn2");
