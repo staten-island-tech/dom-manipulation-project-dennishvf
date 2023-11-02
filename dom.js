@@ -15,7 +15,11 @@ return make;
 }
 
 function addcard(Animal){
-document.querySelector(".flex-container").insertAdjacentHTML("afterbegin", `div class="card"><div class="card-title">${Animal.name}<div></div>`);
+document.querySelector(".flex-container").insertAdjacentHTML("afterbegin", `<div class="card">
+<div class="card-title">${Animal.name}</div>
+<div class="pic">${Animal.img}</div>
+<div class="animal-desc">${Animal.desc}</div>
+</div>`);
 }
 
 DOMselectors.form.addEventListener("submit", (event) => {
