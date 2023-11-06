@@ -24,16 +24,17 @@ document.querySelector(".flex-container").insertAdjacentHTML("afterbegin", `<div
 
 DOMselectors.form.addEventListener("submit", (event) => {
     event.preventDefault();
-    const monkey = makeAnimal();
-    addcard(monkey)
+    const Concard = makeAnimal();
+    addcard(Concard)
 });
 
 
 function getridofcard () {
-    const remove = document.querySelector(".btn2");
-    remove.forEach((erase) => {
-        erase.addEventListener("press", (eventf) => {
-            eventf.target.parentElement.remove();
+    const remove = document.querySelectorAll(".btn2");
+    remove.forEach((btn2) => {
+        btn2.addEventListener("press", (eventd) => {
+            eventd.target.parentElement.remove();
         });
-    });
-}
+    })};
+    getridofcard()
+
