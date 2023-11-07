@@ -7,34 +7,40 @@ const DOMselectors= {
     image: document.querySelectorAll(".pic"),
     desc: document.querySelectorAll(".animal-desc"),
     button: document.getElementById("btn"),
-};
+}
 
 function makeAnimal() {
-const make= {name:DOMselectors.AniNameform.value, img:DOMselectors.AniImgform.value,desc:DOMselectors.AniDescform.value,};
-return make;
+const make= {
+    name:DOMselectors.AniNameform.value,
+     img:DOMselectors.AniImgform.value,
+     desc:DOMselectors.AniDescform.value,}
+return make
 }
 
 function addcard(Animal){
 document.querySelector(".flex-container").insertAdjacentHTML("afterbegin", `<div class="card">
-<div class="card-title">${Animal.name}</div>
-<div class="pic">${Animal.img}</div>
-<div class="animal-desc">${Animal.desc}</div>
-</div>`);
+<h1 class="card-title">${Animal.name}</h1>
+<img src="${Animal.photo}" alt="" class="pic">
+<h2 class="animal-desc">${Animal.desc}</h2>
+<button class="btnd">Remove the Card</button>
+</div>`)
+
+const btnr = document.querySelector(".btnd")
+btnr.addEventListener("delete", (eventd)=> {
+    btnr.parentElement.remove()
+})
 }
 
 DOMselectors.form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const Concard = makeAnimal();
+    event.preventDefault()
+    const Concard = makeAnimal()
     addcard(Concard)
-});
+    emptytbox()
+})
 
-
-function getridofcard () {
-    const remove = document.querySelectorAll(".btn2");
-    remove.forEach((btn2) => {
-        btn2.addEventListener("press", (eventd) => {
-            eventd.target.parentElement.remove();
-        });
-    })};
-    getridofcard()
+function emptytbox(){
+    DOMselectors.AniNameform.value = null;
+    DOMselectors.AniImgform.value = null;
+    DOMselectors.AniDescform.value = null;
+}
 
