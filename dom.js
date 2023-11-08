@@ -20,14 +20,14 @@ return make
 function addcard(Animal){
 document.querySelector(".flex-container").insertAdjacentHTML("afterbegin", `<div class="card">
 <h1 class="card-title">${Animal.name}</h1>
-<img src="${Animal.photo}" alt="" class="pic">
+<img src="${Animal.img}" alt="" class="pic">
 <h2 class="animal-desc">${Animal.desc}</h2>
 <button class="btnd">Remove the Card</button>
 </div>`)
 
 const btnr = document.querySelector(".btnd")
-btnr.addEventListener("delete", (eventd)=> {
-    btnr.parentElement.remove()
+btnr.addEventListener("click", (event) => {
+    btnr.parentElement.remove(Animal)
 })
 }
 
